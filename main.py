@@ -74,7 +74,7 @@ mainDF = pd.DataFrame(content, columns=headers) #Los contenidos y headers valida
 
 print(mainDF)
 
-#Output dentro archivos de texto y .csv para validar resultados
+#Output dentro archivos de texto y .csv para validar resultados del dataframe
 with open(r'output.txt', 'w+', encoding='utf-8') as f:
     dfAsString = mainDF.to_string(header=True, index=True)
     f.write(dfAsString)
