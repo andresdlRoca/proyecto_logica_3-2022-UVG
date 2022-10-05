@@ -60,6 +60,7 @@ content = []
 for row in data:
     headers = validarHeader(row)
     if len(headers) == noColumns:
+        print("Encabezado validado correctamente")
         break
 
 del data[0]
@@ -69,6 +70,8 @@ for row in data:
         content.append(validarContenido(row))
     except:
         print(row)
+
+print("Contenido validado correctamente")
 
 mainDF = pd.DataFrame(content, columns=headers) #Los contenidos y headers validaos se ingresan dentro del dataframe
 
